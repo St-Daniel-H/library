@@ -1,0 +1,39 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    width:100%;
+    height:100%;
+    background-color: #f0eef1;
+}
+#topBar{
+    background-color: white;
+    -webkit-box-shadow: 3px 3px 8.5px 3px #aeaeae;
+-moz-box-shadow: 3px 3px 8.5px 3px #aeaeae;
+box-shadow: 3px 3px 8.5px 3px #aeaeae;
+width:100%;
+height:100px;
+display:flex;
+justify-content: space-around;
+text-align: center;
+}
+#AddBookButton, #Logo{
+    margin-top:30px;
+    font-size:20px;
+}
+#preview{
+
+}
+#list{
+    margin: auto;
+    max-width:1000px;
+display:grid;
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+gap:50px;
+}
+.bookCard{
+    background-color: white;
+    width: 200px;
+    height:200px;
+}
