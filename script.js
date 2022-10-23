@@ -35,9 +35,9 @@ function createBook(){
         
             list.innerHTML = myLibrary.map((book,key)=>{
                 if(book.status==true){
-                    return "<div id="+key+" class ='bookCard'><div id='name'><h1>"+book.name+"</h1><button onClick='remove("+key+")'>REmove</button></div><br><div id='description'><h3>"+book.author+"</h3><br>"+book.pages+"<br><input type='checkbox' checked></input></div></div>"      
+                    return "<div id="+key+" class ='bookCard'><div class='containter'><div id='name'><h1>"+book.name+"</h1></div><br><div id='description'><h3>"+book.author+"</h3><br><h3>pages:"+book.pages+"</h3><br><label class='container'><input  type='checkbox' checked><span class='checkmark'></span></label></div><button class='remove' onClick='remove("+key+")'>REmove</button></div></div>"      
                 }else{
-                    return "<div id="+key+" class ='bookCard'><div id='name'><h1>"+book.name+"</h1><button onClick='remove("+key+")'>REmove</button></div><br><div id='description'><h3>"+book.author+"</h3><br>"+book.pages+"<br><input type='checkbox'></input></div></div>"
+                    return "<div id="+key+" class ='bookCard'><div class='containter'><div id='name'><h1>"+book.name+"</div><br><div id='description'><h3>"+book.author+"</h3><br><h3>pages:"+book.pages+"</h3><br><label class='container'><input  type='checkbox'><span class='checkmark'></span></label></div></h1><button class='remove' onClick='remove("+key+")'>REmove</button></div></div>"
 
                 }
             }).join("");

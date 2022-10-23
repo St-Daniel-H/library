@@ -26,14 +26,93 @@ text-align: center;
 
 }
 #list{
-    margin: auto;
-    max-width:1000px;
+    margin-right:auto;
+    margin-bottom:auto;
+    margin-top:100px;
+    margin-left: auto;
+    max-width:1400px;
 display:grid;
-grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 gap:50px;
 }
 .bookCard{
+    margin:auto;
+    min-width:300px;
+    max-width:400px;
+    overflow-wrap: break-word;
+    border-radius: 7% 7% 7% 7% / 7% 7% 7% 7%;
     background-color: white;
-    width: 200px;
-    height:200px;
+    -webkit-box-shadow: 4px 3px 4.5px 3px #dddddd;
+-moz-box-shadow: 4px 3px 4.5px 3px #dddddd;
+box-shadow: 4px 3px 4.5px 3px #dddddd;
+    
+    height:300px;
+    text-align: center;
+    padding:10px;
 }
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 200px;
+    margin-left:50px;
+    background-color: green;
+  }
+  
+  
+  /* When the checkbox is checked, add a blue background */
+  .container input:checked ~ .checkmark {
+    background-color: red;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  .remove{
+    background:none;
+    background-color: red;
+    width:200px;
+    height:50px;
+    border:none;
+    font-size: 20px;
+    border-radius: 25px;
+    margin-top:50px;
+    cursor: pointer;
+  }
+  .remove:hover{
+    background-color: rgb(197, 2, 2);
+  }
+  
